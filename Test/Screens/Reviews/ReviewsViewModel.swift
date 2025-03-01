@@ -6,6 +6,9 @@ final class ReviewsViewModel: NSObject {
     /// Замыкание, вызываемое при изменении `state`.
     var onStateChange: ((State) -> Void)?
 
+    ///Кэш: ключ - id отзыва, значение - высота
+    private var cacheHeight = [UUID: CGFloat]()
+    
     private var state: State
     private let reviewsProvider: ReviewsProvider
     private let ratingRenderer: RatingRenderer
@@ -132,7 +135,22 @@ extension ReviewsViewModel: UITableViewDataSource {
 extension ReviewsViewModel: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        state.items[indexPath.row].height(with: tableView.bounds.size)
+        ///Конфигурация ячейки
+        guard let config = state.items[indexPath.row] as? ReviewCellConfig else {
+            return 44
+        }
+        ///Если есть высота в кэше
+        if let heightCached = cacheHeight[config.id] {
+            return heightCached
+        }
+        ///Вычиляем высоту
+        let newHeight = config.height(with: tableView.bounds.size)
+        
+        ///Сохраняем в кэш
+        cacheHeight[config.id] = newHeight
+        
+        return newHeight
+        
     }
 
     /// Метод дозапрашивает отзывы, если до конца списка отзывов осталось два с половиной экрана по высоте.
