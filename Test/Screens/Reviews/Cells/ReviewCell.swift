@@ -97,6 +97,12 @@ final class ReviewCell: UITableViewCell {
         createdLabel.frame = layout.createdLabelFrame
         showMoreButton.frame = layout.showMoreButtonFrame
     }
+//MARK: - Action
+
+@objc private func didTapShowMore() {
+    guard let config = config else { return }
+    config.onTapShowMore(config.id)
+}
 
 }
 
@@ -147,6 +153,7 @@ private extension ReviewCell {
         contentView.addSubview(showMoreButton)
         showMoreButton.contentVerticalAlignment = .fill
         showMoreButton.setAttributedTitle(Config.showMoreText, for: .normal)
+        showMoreButton.addTarget(self, action: #selector(didTapShowMore), for: .touchUpInside)
     }
 
 }
@@ -270,3 +277,5 @@ private final class ReviewCellLayout {
 
 fileprivate typealias Config = ReviewCellConfig
 fileprivate typealias Layout = ReviewCellLayout
+
+

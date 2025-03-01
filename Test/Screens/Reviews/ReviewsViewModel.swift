@@ -81,8 +81,12 @@ private extension ReviewsViewModel {
             let index = state.items.firstIndex(where: { ($0 as? ReviewItem)?.id == id }),
             var item = state.items[index] as? ReviewItem
         else { return }
+        
         item.maxLines = .zero
         state.items[index] = item
+        
+        cacheHeight[id] = nil
+
         onStateChange?(state)
     }
 
