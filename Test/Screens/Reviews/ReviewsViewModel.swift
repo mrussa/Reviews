@@ -50,13 +50,16 @@ private extension ReviewsViewModel {
             let data = try result.get()
             let reviews = try decoder.decode(Reviews.self, from: data)
             state.items += reviews.items.map(makeReviewItem)
-            
+                    
+            let countCell = ReviewCountCellConfig(totalCount: reviews.count)
+            state.items.append(countCell)
+                    
             state.offset += state.limit
             state.shouldLoad = state.offset < reviews.count
-        } catch {
-            state.shouldLoad = true
-        }
-        onStateChange?(state)
+            } catch {
+                state.shouldLoad = true
+            }
+            onStateChange?(state)
     }
 
     /// Метод, вызываемый при нажатии на кнопку "Показать полностью...".
