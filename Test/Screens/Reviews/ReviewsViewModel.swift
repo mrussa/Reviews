@@ -11,6 +11,7 @@ final class ReviewsViewModel: NSObject {
     private let ratingRenderer: RatingRenderer
     private let decoder: JSONDecoder
 
+
     init(
         state: State = State(),
         reviewsProvider: ReviewsProvider = ReviewsProvider(),
@@ -43,23 +44,31 @@ extension ReviewsViewModel {
 // MARK: - Private
 
 private extension ReviewsViewModel {
+    
 
     /// Метод обработки получения отзывов.
     func gotReviews(_ result: ReviewsProvider.GetReviewsResult) {
         do {
             let data = try result.get()
             let reviews = try decoder.decode(Reviews.self, from: data)
+            
             state.items += reviews.items.map(makeReviewItem)
-                    
-            let countCell = ReviewCountCellConfig(totalCount: reviews.count)
-            state.items.append(countCell)
-                    
+            
             state.offset += state.limit
-            state.shouldLoad = state.offset < reviews.count
-            } catch {
+
+             
+            if state.offset >= reviews.count {
+                let countCell = ReviewCountCellConfig(totalCount: reviews.count)
+                state.items.append(countCell)
+                state.shouldLoad = false
+            } else {
                 state.shouldLoad = true
             }
-            onStateChange?(state)
+            state.shouldLoad = state.offset < reviews.count
+        } catch {
+            state.shouldLoad = true
+        }
+        onStateChange?(state)
     }
 
     /// Метод, вызываемый при нажатии на кнопку "Показать полностью...".

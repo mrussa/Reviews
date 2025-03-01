@@ -1,5 +1,5 @@
 /// Модель отзыва.
-struct Review: Decodable {
+struct Review: /*Decodable*/ Codable {
     ///Рейтинг отзыва
     let rating: Int
     ///Имя и фамилия пользователя отзыва.

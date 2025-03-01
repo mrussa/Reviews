@@ -34,9 +34,23 @@ extension ReviewsProvider {
 
         do {
             let data = try Data(contentsOf: url)
-            completion(.success(data))
+            let allReviews = try JSONDecoder().decode(Reviews.self, from: data)
+                
+            let limit = 20
+                
+            if offset >= allReviews.items.count {
+                let emptyReviews = Reviews(items: [], count: allReviews.count)
+                let emptyData = try JSONEncoder().encode(emptyReviews)
+                return completion(.success(emptyData))
+            }
+                
+            let end = min(offset + limit, allReviews.items.count)
+            let slice = Array(allReviews.items[offset..<end])
+            let slicedReviews = Reviews(items: slice, count: allReviews.count)
+            let slicedData = try JSONEncoder().encode(slicedReviews)
+            return completion(.success(slicedData))
         } catch {
-            completion(.failure(.badData(error)))
+            return completion(.failure(.badData(error)))
         }
     }
 

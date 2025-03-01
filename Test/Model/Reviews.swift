@@ -1,5 +1,5 @@
 /// Модель отзывов.
-struct Reviews: Decodable {
+struct Reviews: /*Decodable*/ Codable{
 
     /// Модели отзывов.
     let items: [Review]
