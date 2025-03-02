@@ -58,8 +58,8 @@ private extension ReviewsViewModel {
             state.items += reviews.items.map(makeReviewItem)
             
             state.offset += state.limit
-
-             
+            
+            
             if state.offset >= reviews.count {
                 let countCell = ReviewCountCellConfig(totalCount: reviews.count)
                 state.items.append(countCell)
@@ -71,7 +71,9 @@ private extension ReviewsViewModel {
         } catch {
             state.shouldLoad = true
         }
-        onStateChange?(state)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.onStateChange?(self.state)        }
     }
 
     /// Метод, вызываемый при нажатии на кнопку "Показать полностью...".
