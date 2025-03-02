@@ -56,29 +56,32 @@ private extension ReviewsViewModel {
 
     /// Метод обработки получения отзывов.
     func gotReviews(_ result: ReviewsProvider.GetReviewsResult) {
-        do {
-            let data = try result.get()
-            let reviews = try decoder.decode(Reviews.self, from: data)
-            
-            state.items += reviews.items.map(makeReviewItem)
-            
-            state.offset += state.limit
-            
-            
-            if state.offset >= reviews.count {
-                let countCell = ReviewCountCellConfig(totalCount: reviews.count)
-                state.items.append(countCell)
-                state.shouldLoad = false
-            } else {
-                state.shouldLoad = true
-            }
-            state.shouldLoad = state.offset < reviews.count
-        } catch {
-            state.shouldLoad = true
-        }
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.onStateChange?(self.state)        }
+            do {
+                let data = try result.get()
+                let reviews = try self.decoder.decode(Reviews.self, from: data)
+                
+                self.state.items.removeAll(where: { $0 is ReviewCountCellConfig })
+
+                self.state.items += reviews.items.map(self.makeReviewItem)
+
+                self.state.offset += reviews.items.count
+
+                let countCell = ReviewCountCellConfig(totalCount: reviews.count)
+                self.state.items.append(countCell)
+
+                if self.state.offset >= reviews.count {
+                    self.state.shouldLoad = false
+                } else {
+                    self.state.shouldLoad = true
+                }
+                
+            } catch {
+                self.state.shouldLoad = true
+            }
+            self.onStateChange?(self.state)
+        }
     }
 
     /// Метод, вызываемый при нажатии на кнопку "Показать полностью...".
@@ -148,22 +151,7 @@ extension ReviewsViewModel: UITableViewDataSource {
 extension ReviewsViewModel: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        ///Конфигурация ячейки
-        guard let config = state.items[indexPath.row] as? ReviewCellConfig else {
-            return 44
-        }
-        ///Если есть высота в кэше
-        if let heightCached = cacheHeight[config.id] {
-            return heightCached
-        }
-        ///Вычиляем высоту
-        let newHeight = config.height(with: tableView.bounds.size)
-        
-        ///Сохраняем в кэш
-        cacheHeight[config.id] = newHeight
-        
-        return newHeight
-        
+        state.items[indexPath.row].height(with: tableView.bounds.size)
     }
 
     /// Метод дозапрашивает отзывы, если до конца списка отзывов осталось два с половиной экрана по высоте.
