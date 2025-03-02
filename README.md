@@ -62,8 +62,7 @@ onTapShowMore: { [weak self] id in
 ---  
 
 ## 7. Плавность скроллинга
-- Открыть `Instruments`. Выбрать `Animation Hitches`.
-- Так как для каждой ячеки вручную рассчитывается высота через `boundingRect`, то кэшируем результаты высоты для каждого id.
+- Изменение потока `getReviews()` на background и `gotReviews()` на main.
   
 ---
 
