@@ -6,49 +6,70 @@
             "last_name": "Петров",
             "rating": 5,
             "text": "Кроссовки хорошие. Удобные. Как по мне сшиты.",
-            "created": "1 час назад"
+            "created": "1 час назад",
+            "avatar_url": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "photo_urls": [ "https://images.unsplash.com/photo-1566047230499-0b6d88beee82?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D", "https://images.unsplash.com/photo-1594883422096-c7f0b81e0133?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D"
+            ]
         },
         {
             "first_name": "Екатерина",
             "last_name": "Иванова",
             "rating": 3,
             "text": "Скользские ужасно.",
-            "created": "12 минут назад"
+            "created": "12 минут назад",
+            "avatar_url": "https://plus.unsplash.com/premium_photo-1689551671541-31a345ce6ae0?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM1fHx8ZW58MHx8fHx8",
+            "photo_urls": [ "https://images.unsplash.com/photo-1566047230499-0b6d88beee82?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D", "https://images.unsplash.com/photo-1594883422096-c7f0b81e0133?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D"
+            ]
         },
         {
             "first_name": "Евгения",
             "last_name": "Петрова",
             "rating": 4,
             "text": "Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "created": "35 минут назад"
+            "created": "35 минут назад",
+            "avatar_url": "https://plus.unsplash.com/premium_photo-1689551671541-31a345ce6ae0?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM1fHx8ZW58MHx8fHx8",
+            "photo_urls": [ "https://images.unsplash.com/photo-1566047230499-0b6d88beee82?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D", "https://images.unsplash.com/photo-1594883422096-c7f0b81e0133?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D"
+            ]
         },
         {
             "first_name": "Илья",
             "last_name": "Петров",
             "rating": 2,
             "text": "Понравилось отношение - несмотря на то, что заказ был выполнен не идеально, продавец был очень любезен и шёл... Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "created": "минуту назад"
+            "created": "минуту назад",
+            "avatar_url": "https://images.unsplash.com/photo-1630724725268-8272ac390de7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQ0fHx8ZW58MHx8fHx8",
+            "photo_urls": [ "https://images.unsplash.com/photo-1566047230499-0b6d88beee82?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D", "https://images.unsplash.com/photo-1594883422096-c7f0b81e0133?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D"
+            ]
         },
         {
             "first_name": "Никита",
             "last_name": "Иванов",
             "rating": 5,
             "text": "Отлично выглядят, хоть и скользковатые...",
-            "created": "только что"
+            "created": "только что",
+            "avatar_url": "https://images.unsplash.com/photo-1630724725269-a0e78771cea0?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQ4fHx8ZW58MHx8fHx8",
+            "photo_urls": [ "https://images.unsplash.com/photo-1566047230499-0b6d88beee82?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D", "https://images.unsplash.com/photo-1594883422096-c7f0b81e0133?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D"
+            ]
         },
         {
             "first_name": "Олег",
             "last_name": "Николаев",
             "rating": 1,
             "text": "Ребёнок жалуется, что очень скользские. Пока шла до школы...",
-            "created": "15 минут назад"
+            "created": "15 минут назад",
+            "avatar_url": "https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+            "photo_urls": [ "https://images.unsplash.com/photo-1566047230499-0b6d88beee82?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D", "https://images.unsplash.com/photo-1594883422096-c7f0b81e0133?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c25pa2Vyc3xlbnwwfHwwfHx8MA%3D%3D"
+            ]
         },
         {
             "first_name": "Николай",
             "last_name": "Петров",
             "rating": 2,
             "text": "",
-            "created": "вчера в 12:39"
+            "created": "вчера в 12:39",
+            "avatar_url": "",
+            "photo_urls": []
+            
         },
 
 
@@ -57,49 +78,63 @@
             "last_name": "Петров",
             "rating": 5,
             "text": "Кроссовки хорошие. Удобные. Как по мне сшиты.",
-            "created": "1 час назад"
+            "created": "1 час назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Екатерина",
             "last_name": "Иванова",
             "rating": 3,
             "text": "Скользские ужасно.",
-            "created": "12 минут назад"
+            "created": "12 минут назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Евгения",
             "last_name": "Петрова",
             "rating": 4,
             "text": "Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "created": "35 минут назад"
+            "created": "35 минут назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Илья",
             "last_name": "Петров",
             "rating": 2,
             "text": "Понравилось отношение - несмотря на то, что заказ был выполнен не идеально, продавец был очень любезен и шёл... Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "created": "минуту назад"
+            "created": "минуту назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Никита",
             "last_name": "Иванов",
             "rating": 5,
             "text": "Отлично выглядят, хоть и скользковатые...",
-            "created": "только что"
+            "created": "только что",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Олег",
             "last_name": "Николаев",
             "rating": 1,
             "text": "Ребёнок жалуется, что очень скользские. Пока шла до школы...",
-            "created": "15 минут назад"
+            "created": "15 минут назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Николай",
             "last_name": "Петров",
             "rating": 2,
             "text": "",
-            "created": "вчера в 12:39"
+            "created": "вчера в 12:39",
+            "avatar_url": "",
+            "photo_urls": []
         },
 
 
@@ -108,49 +143,63 @@
             "last_name": "Петров",
             "rating": 5,
             "text": "Кроссовки хорошие. Удобные. Как по мне сшиты.",
-            "created": "1 час назад"
+            "created": "1 час назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Екатерина",
             "last_name": "Иванова",
             "rating": 3,
             "text": "Скользские ужасно.",
-            "created": "12 минут назад"
+            "created": "12 минут назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Евгения",
             "last_name": "Петрова",
             "rating": 4,
             "text": "Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "created": "35 минут назад"
+            "created": "35 минут назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Илья",
             "last_name": "Петров",
             "rating": 2,
             "text": "Понравилось отношение - несмотря на то, что заказ был выполнен не идеально, продавец был очень любезен и шёл... Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "created": "минуту назад"
+            "created": "минуту назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Никита",
             "last_name": "Иванов",
             "rating": 5,
             "text": "Отлично выглядят, хоть и скользковатые...",
-            "created": "только что"
+            "created": "только что",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Олег",
             "last_name": "Николаев",
             "rating": 1,
             "text": "Ребёнок жалуется, что очень скользские. Пока шла до школы...",
-            "created": "15 минут назад"
+            "created": "15 минут назад",
+            "avatar_url": "",
+            "photo_urls": []
         },
         {
             "first_name": "Николай",
             "last_name": "Петров",
             "rating": 2,
             "text": "",
-            "created": "вчера в 12:39"
-        },
+            "created": "вчера в 12:39",
+            "avatar_url": "",
+            "photo_urls": []
+        }
     ]
 }

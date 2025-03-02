@@ -1,5 +1,5 @@
 /// Модель отзыва.
-struct Review: /*Decodable*/ Codable {
+struct Review: Codable {
     ///Рейтинг отзыва
     let rating: Int
     ///Имя и фамилия пользователя отзыва.
@@ -10,5 +10,9 @@ struct Review: /*Decodable*/ Codable {
     let text: String
     /// Время создания отзыва.
     let created: String
+    ///Аватар пользователя
+    let avatar_url: String?
+    ///Фото пользователя
+    let photo_url: [String]?
 
 }

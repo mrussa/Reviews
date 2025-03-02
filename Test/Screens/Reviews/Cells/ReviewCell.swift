@@ -21,6 +21,10 @@ struct ReviewCellConfig {
     let created: NSAttributedString
     /// Замыкание, вызываемое при нажатии на кнопку "Показать полностью...".
     let onTapShowMore: (UUID) -> Void
+    ///Аватарка пользователя
+    let avatar_url: String?
+    ///Фото пользователя
+    let photo_urls: [String]?
 
     /// Объект, хранящий посчитанные фреймы для ячейки отзыва.
     fileprivate let layout = ReviewCellLayout()
@@ -138,6 +142,14 @@ private extension ReviewCell {
         avatarImageView.contentMode = .scaleAspectFill
         avatarImageView.layer.cornerRadius = ReviewCellLayout.avatarCornerRadius
         avatarImageView.layer.masksToBounds = true
+        
+        if let avatarURL = config?.avatar_url, !avatarURL.isEmpty {
+            loadImageCached(from: avatarURL) { [weak self] image in
+                DispatchQueue.main.async {
+                    self?.avatarImageView.image = image ?? UIImage(named: "avatar")
+                }
+            }
+        }
     }
 
     func setupReviewTextLabel() {
@@ -208,7 +220,6 @@ private final class ReviewCellLayout {
 
     /// Возвращает высоту ячейку с данной конфигурацией `config` и ограничением по ширине `maxWidth`.
     func height(config: Config, maxWidth: CGFloat) -> CGFloat {
-//        let width = maxWidth - insets.left - insets.right
 
         avatarImageViewFrame = CGRect(x: insets.left,
                                       y: insets.top,
